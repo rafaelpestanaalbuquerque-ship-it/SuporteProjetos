@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🧪 TESTE – Lidl Projetos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="topo" hidden>
+    <a href="#/" class="marca">📋 Lidl Projetos</a>
+    <nav id="menu"></nav>
+    <span id="utilizador"></span>
+    <button id="sair" class="discreto">Sair</button>
+  </header>
+  <main id="app"><p class="aviso">A carregar…</p></main>
+  <div id="toast"></div>
+  <script type="module" src="app.js"></script>
+  <script>
+    // Se os scripts não arrancarem, explica porquê em vez de ficar em branco
+    setTimeout(function () {
+      if (document.getElementById("barra-teste")) return;
+      var msg = location.protocol === "file:"
+        ? "<b>Abriste o ficheiro diretamente no PC (duplo clique).</b> O browser bloqueia os scripts assim. Abre o site pelo endereço do GitHub Pages (https://&lt;utilizador&gt;.github.io/lidl-projetos-teste/)."
+        : "<b>Os scripts do site não carregaram.</b> Confirma que estão no repositório os 5 ficheiros: index.html, app.js, config.js, style.css e <b>supabase-teste.js</b>. Depois recarrega com Ctrl+F5.";
+      document.getElementById("app").innerHTML = '<div class="cartao vermelho"><h2>⚠️ O site não arrancou</h2><p>' + msg + "</p></div>";
+    }, 3000);
+  </script>
+</body>
+</html>
